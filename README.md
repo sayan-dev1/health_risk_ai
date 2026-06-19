@@ -1,0 +1,363 @@
+# 🏥 AI Health Risk Assistant
+
+An AI-powered preventive healthcare platform that predicts the risk of:
+
+* ❤️ Heart Disease
+* 🧠 Stroke
+* 🩸 Diabetes
+
+using machine learning, explainable AI (SHAP), personalized recommendations, and cross-disease risk analysis.
+
+---
+
+# Overview
+
+Aegis AI Health Risk Assistant is designed as a preventive health analytics platform rather than a diagnostic tool.
+
+The system collects demographic, lifestyle, and health-related information from users and generates individualized risk assessments for multiple chronic diseases.
+
+Unlike traditional prediction systems, Aegis combines:
+
+* Multi-disease prediction
+* Explainable AI
+* Personalized recommendations
+* Cross-disease risk analysis
+
+into a single healthcare dashboard.
+
+---
+
+# Features
+
+## Multi-Disease Risk Prediction
+
+Predicts:
+
+* Heart Disease Risk
+* Stroke Risk
+* Diabetes Risk
+
+Each disease uses an independently trained machine learning model.
+
+---
+
+## Explainable AI (SHAP)
+
+Provides transparent model explanations by identifying:
+
+### Risk Increasing Factors
+
+Examples:
+
+* Smoking
+* High BMI
+* Poor Sleep
+* Physical Inactivity
+
+### Protective Factors
+
+Examples:
+
+* Physical Activity
+* Healthy Sleep
+* Good General Health
+
+Users can understand why a specific risk score was produced.
+
+---
+
+## Personalized Health Recommendations
+
+Recommendations are generated using:
+
+* User profile
+* Disease risk scores
+* SHAP feature contributions
+
+Categories include:
+
+* Lifestyle
+* Exercise
+* Weight Management
+* Sleep
+* Preventive Care
+
+---
+
+## Cross-Disease Analysis
+
+One of the project's unique features.
+
+The system identifies:
+
+* Shared risk factors
+* Disease-specific drivers
+* Overlapping health vulnerabilities
+
+Examples:
+
+| Shared Driver     | Diseases                |
+| ----------------- | ----------------------- |
+| BMI               | Heart, Stroke, Diabetes |
+| Smoking           | Heart, Stroke           |
+| Physical Activity | Heart, Diabetes         |
+| General Health    | Heart, Diabetes         |
+
+---
+
+# Machine Learning Models
+
+Three separate models were developed.
+
+## Heart Disease Model
+
+Target:
+
+* HeartDisease
+
+Features:
+
+* Sex
+* AgeCategory
+* BMI
+* Smoking
+* PhysicalActivity
+* AlcoholDrinking
+* MentalHealth
+* GenHealth
+* KidneyDisease
+* SleepTime
+* DiffWalking
+* Asthma
+
+Final Model:
+
+* Logistic Regression
+* SMOTE
+* Class Weight Balancing
+
+Performance:
+
+* ROC-AUC ≈ 0.83
+* Recall ≈ 0.96 (threshold optimized)
+
+---
+
+## Stroke Model
+
+Target:
+
+* Stroke
+
+Features:
+
+* Gender
+* Age
+* Hypertension
+* Ever Married
+* Work Type
+* Residence Type
+* BMI
+* Smoking Status
+
+---
+
+## Diabetes Model
+
+Target:
+
+* Diabetes
+
+Features:
+
+* HighBP
+* HighChol
+* CholCheck
+* BMI
+* Smoker
+* HeartDiseaseorAttack
+* PhysicalActivity
+* Alcohol Consumption
+* General Health
+* Mental Health
+* Difficulty Walking
+* Sex
+* Age
+* Education
+
+---
+
+# Unified User Profile
+
+The platform collects user information only once.
+
+## User Inputs
+
+* Gender
+* Age
+* Hypertension
+* Ever Married
+* Work Type
+* Residence Type
+* BMI
+* Smoking Status
+* High Cholesterol
+* Cholesterol Check
+* Previous Heart Attack
+* Physical Activity
+* Alcohol Consumption
+* Mental Health
+* General Health
+* Kidney Disease
+* Sleep Time
+* Difficulty Walking
+* Education
+* Asthma
+
+Each model automatically uses only the features required for its prediction.
+
+---
+
+# System Architecture
+
+## Frontend
+
+Technology Stack:
+
+* React
+* TypeScript
+* Tailwind CSS
+* Modern Dashboard UI
+
+Main Sections:
+
+* Overview
+* Heart Disease
+* Stroke
+* Diabetes
+* Explainable AI
+* Recommendations
+* Cross-Disease Analysis
+* Model Evaluation
+
+---
+
+## Backend
+
+Technology Stack:
+
+* FastAPI
+* Python
+* Joblib
+* SHAP
+
+Responsibilities:
+
+* Load trained models
+* Run predictions
+* Generate SHAP explanations
+* Generate recommendations
+* Perform cross-disease analysis
+
+---
+
+# Project Structure
+
+```text
+Aegis-AI-Health-Risk-Assistant/
+
+├── frontend/
+│   ├── components/
+│   ├── pages/
+│   └── App.tsx
+│
+├── backend/
+│   ├── api/
+│   ├── predictors/
+│   │   ├── heart_predictor.py
+│   │   ├── stroke_predictor.py
+│   │   └── diabetes_predictor.py
+│   │
+│   ├── explainability/
+│   │   ├── shap_helper.py
+│   │   └── risk_factors.py
+│   │
+│   ├── recommendations/
+│   │   └── recommendation_engine.py
+│   │
+│   └── analysis/
+│       └── cross_disease_analysis.py
+│
+├── models/
+│   ├── heart_model.pkl
+│   ├── stroke_model.pkl
+│   ├── diabetes_model.pkl
+│   ├── preprocessors/
+│   ├── thresholds/
+│   └── shap_backgrounds/
+│
+└── README.md
+```
+
+---
+
+# Dashboard Workflow
+
+## Step 1
+
+User completes the Health Assessment Form.
+
+## Step 2
+
+Models calculate:
+
+* Heart Disease Risk
+* Stroke Risk
+* Diabetes Risk
+
+## Step 3
+
+Dashboard displays:
+
+* Risk Scores
+* Risk Levels
+* SHAP Explanations
+* Personalized Recommendations
+
+## Step 4
+
+Cross-Disease Analysis identifies shared health risks.
+
+---
+
+# Important Disclaimer
+
+This application is intended for educational and preventive health awareness purposes only.
+
+The predictions generated by the machine learning models do not constitute medical advice, diagnosis, or treatment recommendations.
+
+Users should always consult qualified healthcare professionals for medical decisions.
+
+---
+
+# Future Improvements
+
+* Real Clinical Dataset Integration
+* Lab Report Upload
+* Blood Test Analysis
+* PDF Health Reports
+* User Authentication
+* Historical Risk Tracking
+* Longitudinal Health Monitoring
+* LLM-Powered Health Coach
+* Wearable Device Integration
+
+---
+
+# Author
+
+Sayan Ghosh
+
+B.Sc. Data Science
+
+AI • Machine Learning • Explainable AI • Healthcare Analytics

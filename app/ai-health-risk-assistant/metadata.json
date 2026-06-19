@@ -1,0 +1,6 @@
+{
+  "name": "AI Health Risk Assistant",
+  "description": "A professional AI-powered preventive health risk assessment and analytics dashboard estimating Heart Disease, Stroke, and Diabetes likelihoods through Explainable AI (SHAP) and detailed lifestyle correlations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

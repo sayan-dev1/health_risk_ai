@@ -1,0 +1,33 @@
+# Core Data Science
+numpy
+pandas
+scipy
+
+# Machine Learning
+scikit-learn
+xgboost
+imbalanced-learn
+
+# Model Saving / Loading
+joblib
+
+# Explainable AI
+shap
+
+# Backend API
+fastapi
+uvicorn
+pydantic
+python-multipart
+
+# Visualization
+matplotlib
+plotly
+
+# Notebook Development
+jupyter
+notebook
+ipykernel
+
+# Optional Utilities
+tqdm
