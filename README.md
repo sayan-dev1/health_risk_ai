@@ -356,8 +356,6 @@ Users should always consult qualified healthcare professionals for medical decis
 
 # Author
 
-Sayan Ghosh
-
-B.Sc. Data Science
+Sayan
 
 AI • Machine Learning • Explainable AI • Healthcare Analytics
